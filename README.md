@@ -36,3 +36,7 @@ Next step:
 - add Python ETL script
 - add more dbt tests
 - improve project documentation
+
+## dbt tests
+
+The project uses basic dbt tests to check data quality.
