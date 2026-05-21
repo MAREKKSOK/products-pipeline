@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: products_raw
+    database: de_project_db
+    schema: public
+    tables:
+      - name: raw_products
+      

@@ -1,0 +1,43 @@
+version: 2
+
+models:
+  - name: mart_products
+    description: 'Tabela zawierająca najważniejsze informacje o produktach'
+    columns:
+      - name: product_id
+        description: 'Unikatowy numer wewnętrzny produktu'
+        tests:
+          - not_null
+          - unique
+      - name: product_title
+        description: 'Nazwa produktu'
+        tests:
+          - not_null
+      - name: rating
+        description: 'Średnia ocen produktu według kupujących'
+        tests:
+          - not_null
+          - dbt_utils.accepted_range:
+              arguments:
+                min_value: 0
+                max_value: 5
+      - name: is_expensive
+        tests:
+          - accepted_values:
+              arguments:
+               values: [0,1]
+      - name: good_rating
+        tests:
+          - accepted_values:
+              arguments:
+                values: [0,1]
+      - name: big_stock
+        tests:
+          - accepted_values:
+              arguments:
+                values: [0,1]
+      - name: higher_price_than_category_avg
+        tests:
+          - accepted_values:
+              arguments:
+                values: [0,1]

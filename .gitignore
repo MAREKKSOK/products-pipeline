@@ -1,0 +1,23 @@
+# Logs
+logs/
+*.log
+
+# Data files
+data/raw/
+data/processed/
+*.csv
+*.parquet
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# dbt
+dbt_project/**/target/
+dbt_project/**/dbt_packages/
+dbt_project/**/logs/
+
+# Environment variables
+.env
