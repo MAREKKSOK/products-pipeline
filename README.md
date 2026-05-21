@@ -29,3 +29,10 @@ The dbt part is working.
 
 Next step:
 - add Airflow pipeline
+
+## Next steps
+
+- add Airflow DAG
+- add Python ETL script
+- add more dbt tests
+- improve project documentation
